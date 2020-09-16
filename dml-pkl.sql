@@ -17,7 +17,7 @@ INSERT INTO city VALUES(12 , 'bhubneshwar');
 INSERT INTO city VALUES(13 , 'bheemipattanam');
 INSERT INTO city VALUES(14 , 'yadgir');
 --2. Insert into referee
-
+select * from referee;
 INSERT INTO referee VALUES(1 , 'Harshu');
 INSERT INTO referee VALUES(2 , 'Arjun');
 INSERT INTO referee VALUES(3 , 'vijay');
@@ -35,6 +35,7 @@ INSERT INTO referee VALUES(14 , 'edward');
 INSERT INTO referee VALUES(15 , 'irfan');
 INSERT INTO referee VALUES(16 , 'jaden');
 --3. Insert into innings
+SELECT * FROM INNINGS;
 INSERT INTO innings VALUES(1 , 1);
 INSERT INTO innings VALUES(2 , 2);
 INSERT INTO innings VALUES(3 , 1);
@@ -74,6 +75,8 @@ INSERT INTO skill VALUES(7,'gaming');
 INSERT INTO skill VALUES(8,'speaking');
 INSERT INTO skill VALUES(9,'sleeping');
 INSERT INTO skill VALUES(10,'reading');
+insert into skill values(12,'defend');
+insert into skill values(12,'defend_play');
 --6. Insert into team id,name,coach,homecity,captain
 INSERT INTO team VALUES(1,'callback clans','sarvesh',1,1);
 INSERT INTO team VALUES(2,'rumtime terror','ramesh',1,1);
@@ -86,18 +89,18 @@ INSERT INTO team VALUES(8,'codechef','kishor',1,1);
 INSERT INTO team VALUES(9,'warriors','mangal',1,1);
 INSERT INTO team VALUES(10,'silent killer','bhavesh',1,1);
 --7. Insert into player id,name,country,skillid,teamid
-INSERT INTO player VALUES(1,'punam','india',1,1);
-INSERT INTO player VALUES(2,'rohit','bhutan',2,10);
-INSERT INTO player VALUES(3,'ratna','japan',3,9);
-INSERT INTO player VALUES(4,'ramesh','nepal',4,8);
-INSERT INTO player VALUES(5,'rohan','china',5,7);
-INSERT INTO player VALUES(6,'tushar','bangladesh',6,6);
-INSERT INTO player VALUES(7,'shradhha','africa',7,5);
-INSERT INTO player VALUES(8,'amrut','america',8,4);
-INSERT INTO player VALUES(9,'chetan','iraq',9,3);
-INSERT INTO player VALUES(10,'mayur','iran',10,2);
-INSERT INTO player VALUES(11,'tejas','malesia',1,1);
-INSERT INTO player VALUES(12,'sarvesh','parag',2,2);
+INSERT INTO player VALUES(1,1,'india',1,1);
+INSERT INTO player VALUES(2,2,'bhutan',2,10);
+INSERT INTO player VALUES(3,3,'japan',3,9);
+INSERT INTO player VALUES(4,4,'nepal',4,8);
+INSERT INTO player VALUES(5,5,'china',5,7);
+INSERT INTO player VALUES(6,6,'bangladesh',6,6);
+INSERT INTO player VALUES(7,7,'africa',7,5);
+INSERT INTO player VALUES(8,8,'america',8,4);
+INSERT INTO player VALUES(9,9,'iraq',9,3);
+INSERT INTO player VALUES(10,10,'iran',10,2);
+INSERT INTO player VALUES(11,11,'malesia',1,1);
+INSERT INTO player VALUES(12,12,'parag',2,2);
 INSERT INTO player VALUES(13,'bhavesh','dubai',3,3);
 INSERT INTO player VALUES(14,'pratiksha','shanghai',4,4);
 INSERT INTO player VALUES(15,'hrutika','monaco',5,5);
@@ -135,8 +138,15 @@ INSERT INTO event VALUES(14,2,1,1,1,1,1,1,1);
 INSERT INTO extra_event VALUES(1,1,1,1,1);
 --11. Insert into outcome  id,status,winner_team_id,score,player_of_match
 INSERT INTO outcome VALUES(1,'complete',1,1,1);
+INSERT INTO outcome VALUES(2,'WINNER',1,1,1);
+INSERT INTO outcome VALUES(4,'winner',2,35,2);
 --12. Insert into game  id,game_date,team_id_1,team_id_2,venue_id,outcome_id,referee_id_1,referee_id_2,first_innings_id,second_innings_id
 INSERT INTO game VALUES(1,sysdate,1,2,1,1,1,2,1,2);
+INSERT INTO game VALUES(2,DATE '2020-12-12',1,2,1,1,1,2,1,2);
+INSERT INTO game VALUES(3,DATE '2020-01-01',1,2,1,1,1,2,1,2);
+INSERT INTO game VALUES(5,'26-JAN-20',1,2,1,1,1,2,1,2);
+INSERT INTO game VALUES(6,'26-FEB-20',1,2,1,1,1,2,1,2);
+select * from game;
 --13. Update player table
 UPDATE player
 SET country = 'Prograd'
